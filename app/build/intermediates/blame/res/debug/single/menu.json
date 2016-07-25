@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\menu\\login.xml",
+        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\menu\\login.xml"
+    },
+    {
+        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\menu\\account_center.xml",
+        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\menu\\account_center.xml"
+    },
+    {
+        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\menu\\register.xml",
+        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\menu\\register.xml"
+    }
+]
