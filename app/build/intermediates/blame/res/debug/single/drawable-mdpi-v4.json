@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\login1.png",
-        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\login1.png"
-    },
-    {
         "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\per_center.png",
         "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\per_center.png"
     },
@@ -16,11 +12,15 @@
         "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\ic_launcher1.png"
     },
     {
-        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\intro.png",
-        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\intro.png"
+        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\login1.png",
+        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\login1.png"
     },
     {
         "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\login.png",
         "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\login.png"
+    },
+    {
+        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\intro.png",
+        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\drawable-mdpi\\intro.png"
     }
 ]

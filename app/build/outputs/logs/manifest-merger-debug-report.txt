@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:2:1-61:12
-	xmlns:android
-		ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:2:11-69
 	package
 		ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml
@@ -15,6 +13,8 @@ ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:2:1-61:12
 		ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:4:5-28
 		INJECTED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml
 		INJECTED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from D:\news\HEU_NewsClient\app\src\main\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:23.0.1] D:\news\HEU_NewsClient\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43

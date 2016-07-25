@@ -30,11 +30,14 @@ public class News {
 		Provider = provider;
 	}
 	public String getDatetime() {
+		/*
 		if(Datetime.equals(""))
 			return null;
 		else{
 			return Datetime.substring(5,Datetime.length()-3);
 		}
+		*/
+		return Datetime;
 	}
 	public void setDatetime(String datetime) {
 		Datetime = datetime;
