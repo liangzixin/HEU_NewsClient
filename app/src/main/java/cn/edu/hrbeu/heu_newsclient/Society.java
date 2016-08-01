@@ -49,7 +49,7 @@ public class Society extends Activity {
         mNewsList = new SimpleAdapter(this,
         		mlist,
         		R.layout.listitem,
-        		new String[]{"title", "provider", "pubtime", "id", "loc", "orig"},
+        		new String[]{"name", "provider", "createTime", "id", "loc", "orig"},
         		new int[]{R.id.news_title, R.id.news_provider, R.id.news_pubtime, R.id.news_id, R.id.news_details, R.id.news_orig}
         		);
         
@@ -60,12 +60,12 @@ public class Society extends Activity {
         		if(msg.obj != null) {
         			News news = (News)msg.obj;
         			HashMap<String, Object> map = new HashMap<String, Object>();
-        			map.put("title", news.getTitle());
-        			map.put("provider", news.getProvider());
-        			map.put("pubtime", news.getDatetime());
-        			map.put("id", news.getNewsID());
-        			map.put("loc", news.getStorageLoc());
-        			map.put("orig", news.getLink());
+        			map.put("name", news.getName());
+        			map.put("provider", "东川供求网");
+        			map.put("createTime", news.getCreateTime());
+        			map.put("id", news.getId());
+        		//	map.put("loc", news.getStorageLoc());
+        		//	map.put("orig", news.getLink());
         			mlist.add(map);
         			mNewsList.notifyDataSetChanged();
         		}
@@ -154,6 +154,7 @@ public class Society extends Activity {
     	}
     	
     	public void endElement(String uri, String localName, String name) throws SAXException{
+			/*
     		if(localName.equals("news")) {
     			Message msg = mMainHandler.obtainMessage();
     			msg.obj = curNews;
@@ -175,6 +176,7 @@ public class Society extends Activity {
     		} else if(localName.equals("origlink")) {
     			curNews.setLink(content);
     		}
+    		*/
     		super.endElement(uri, localName, name);
     	}
     	

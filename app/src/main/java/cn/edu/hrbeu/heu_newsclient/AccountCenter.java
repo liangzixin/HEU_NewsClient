@@ -142,12 +142,12 @@ class NewsFavAdapter extends BaseAdapter{
 		TextView Details = (TextView) convertView.findViewById(R.id.news_details);
 		TextView OrigLink = (TextView) convertView.findViewById(R.id.news_orig);
 		
-		Title.setText(data.get(position).getTitle());
-		Provider.setText(data.get(position).getProvider());
-		Pubtime.setText(data.get(position).getDatetime());
-		NewsID.setText(data.get(position).getNewsID());
-		Details.setText(data.get(position).getStorageLoc());
-		OrigLink.setText(data.get(position).getLink());
+		Title.setText(data.get(position).getName());
+	//	Provider.setText(data.get(position).getProvider());
+		//Pubtime.setText(data.get(position).getCreateTime());
+		NewsID.setText(data.get(position).getId());
+	//	Details.setText(data.get(position).getStorageLoc());
+	//	OrigLink.setText(data.get(position).getLink());
 		return convertView;
 	}
 }

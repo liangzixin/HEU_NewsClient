@@ -1,7 +1,55 @@
 package cn.edu.hrbeu.heu_newsclient.model;
 
+import java.util.Date;
+
 public class News {
-	
+
+	private int id;
+	private String name;
+	private String categoryId;
+	private Date createTime;
+
+
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public String getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
+	}
+
+
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	/*
 	private String NewsID;
 	private String Title;
 	private String Category;
@@ -10,7 +58,7 @@ public class News {
 	private String Datetime;
 	private String StorageLoc;
 	private String Link;
-	
+
 	public String getTitle() {
 		return Title;
 	}
@@ -30,13 +78,13 @@ public class News {
 		Provider = provider;
 	}
 	public String getDatetime() {
-		/*
+
 		if(Datetime.equals(""))
 			return null;
 		else{
 			return Datetime.substring(5,Datetime.length()-3);
 		}
-		*/
+
 		return Datetime;
 	}
 	public void setDatetime(String datetime) {
@@ -66,5 +114,5 @@ public class News {
 	public void setLink(String link) {
 		Link = link;
 	}
-
+	*/
 }

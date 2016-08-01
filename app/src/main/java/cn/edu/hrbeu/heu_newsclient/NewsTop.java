@@ -49,8 +49,8 @@ public class NewsTop extends Activity {
         mNewsList = new SimpleAdapter(this,
         		mlist,
         		R.layout.listitem,
-        		new String[]{"title", "provider", "pubtime", "id", "loc", "orig"},
-        		new int[]{R.id.news_title, R.id.news_provider, R.id.news_pubtime, R.id.news_id, R.id.news_details, R.id.news_orig}
+        		new String[]{"name", "provider", "createTime", "id"},
+        		new int[]{R.id.news_title, R.id.news_provider, R.id.news_pubtime, R.id.news_id}
         		);
         
         mNews.setAdapter(mNewsList);
@@ -60,12 +60,11 @@ public class NewsTop extends Activity {
         		if(msg.obj != null) {
         			News news = (News)msg.obj;
         			HashMap<String, Object> map = new HashMap<String, Object>();
-        			map.put("title", news.getTitle());
-        			map.put("provider", news.getProvider());
-        			map.put("pubtime", news.getDatetime());
-        			map.put("id", news.getNewsID());
-        			map.put("loc", news.getStorageLoc());
-        			map.put("orig", news.getLink());
+        			map.put("name", news.getName());
+        			map.put("provider", "东川供求网");
+        			map.put("createTime", news.getCreateTime());
+        			map.put("id", news.getId());
+
         			mlist.add(map);
         			mNewsList.notifyDataSetChanged();
         		}
@@ -154,14 +153,15 @@ public class NewsTop extends Activity {
     	}
     	
     	public void endElement(String uri, String localName, String name) throws SAXException{
+			/*
     		if(localName.equals("news")) {
     			Message msg = mMainHandler.obtainMessage();
     			msg.obj = curNews;
     			mMainHandler.sendMessage(msg);
     		}else if(localName.equals("id")) {
-    			curNews.setNewsID(content);
-    		} else if(localName.equals("title")) {
-    			curNews.setTitle(content);
+    			curNews.setId(content);
+    		} else if(localName.equals("name")) {
+    			curNews.setName(content);
     		} else if(localName.equals("category")) {
     			curNews.setCategory(content);
     		} else if(localName.equals("abstract")) {
@@ -175,9 +175,10 @@ public class NewsTop extends Activity {
     		} else if(localName.equals("origlink")) {
     			curNews.setLink(content);
     		}
+    		*/
     		super.endElement(uri, localName, name);
     	}
-    	
+
     	public void characters (char[] ch, int start, int length)  throws SAXException{
     		content = new String(ch, start, length);
     		super.characters(ch, start, length);
