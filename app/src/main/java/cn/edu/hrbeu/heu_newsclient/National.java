@@ -100,8 +100,8 @@ public class National extends Activity {
 	
 	void httpGet() {
     	GetHttpTask task = new GetHttpTask();
-		task.execute(ServerWebRoot.getServerWebRoot()+"NationalNews.xml");
-		//	task.execute(ServerWebRoot.getServerWebRoot()+"UpdateNews");
+//		task.execute(ServerWebRoot.getServerWebRoot()+"NationalNews.xml");
+			task.execute(ServerWebRoot.getServerWebRoot()+"UpdateNews");
     }
     
     public class GetHttpTask extends AsyncTask<String, Integer, String> {

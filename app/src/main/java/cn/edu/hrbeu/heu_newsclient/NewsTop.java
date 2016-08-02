@@ -62,7 +62,7 @@ public class NewsTop extends Activity {
         			HashMap<String, Object> map = new HashMap<String, Object>();
         			map.put("name", news.getName());
         			map.put("provider", "东川供求网");
-        			map.put("createTime", news.getCreateTime());
+        		//	map.put("createTime", news.getCreateTime());
         			map.put("id", news.getId());
 
         			mlist.add(map);
@@ -131,14 +131,14 @@ public class NewsTop extends Activity {
     	public void startElement(String uri, String localName, String name, org.xml.sax.Attributes attributes) throws SAXException {
     		if(localName.equals("news")) {
     			curNews = new News();
-    		} /*else if(localName.equals("id")) {
-    			//String curid = attributes.getValue("id");
-    			//curNews.setNewsID(Integer.parseInt(curid));
-    		} else if(localName.equals("title")) {
-    			curNews.setTitle(attributes.getValue("title"));
-    		} else if(localName.equals("category")) {
-    			curNews.setCategory(attributes.getValue("category"));
-    		} else if(localName.equals("abstract")) {
+    		}/*else if(localName.equals("id")) {
+    			String curid = attributes.getValue("id");
+    			curNews.setId(Integer.parseInt(curid));
+    		} else if(localName.equals("name")) {
+    			curNews.setName(attributes.getValue("name"));
+    		} else if(localName.equals("categoryId")) {
+    			curNews.setCategoryId(attributes.getValue("categoryId"));
+    		}  else if(localName.equals("abstract")) {
     			curNews.setAbstract(attributes.getValue("abstract"));
     		} else if(localName.equals("provider")) {
     			curNews.setProvider(attributes.getValue("provider"));
@@ -153,18 +153,19 @@ public class NewsTop extends Activity {
     	}
     	
     	public void endElement(String uri, String localName, String name) throws SAXException{
-			/*
+
     		if(localName.equals("news")) {
     			Message msg = mMainHandler.obtainMessage();
     			msg.obj = curNews;
     			mMainHandler.sendMessage(msg);
     		}else if(localName.equals("id")) {
-    			curNews.setId(content);
+
+    			curNews.setId(Integer.parseInt(content));
     		} else if(localName.equals("name")) {
     			curNews.setName(content);
-    		} else if(localName.equals("category")) {
-    			curNews.setCategory(content);
-    		} else if(localName.equals("abstract")) {
+    		} else if(localName.equals("categoryId")) {
+    			curNews.setCategoryId(content);
+    		}/* else if(localName.equals("abstract")) {
     			curNews.setAbstract(content);
     		} else if(localName.equals("provider")) {
     			curNews.setProvider(content);
@@ -174,8 +175,8 @@ public class NewsTop extends Activity {
     			curNews.setStorageLoc(content);
     		} else if(localName.equals("origlink")) {
     			curNews.setLink(content);
-    		}
-    		*/
+    		}*/
+
     		super.endElement(uri, localName, name);
     	}
 

@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="cn.edu.hrbeu.heu_newsclient.LoginActivity"
+            android:name="cn.edu.hrbeu.heu_newsclient.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <!--activity
             android:name="cn.edu.hrbeu.heu_newsclient.MainActivity"
             android:label="@string/app_name" >
-        </activity>
+        </activity>-->
         <activity
             android:name="cn.edu.hrbeu.heu_newsclient.NewsTop"
             android:label="@string/title_activity_news_top" >
