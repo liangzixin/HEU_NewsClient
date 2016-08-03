@@ -4,12 +4,12 @@
         "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\layout\\listitem.xml"
     },
     {
-        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_news_top.xml",
-        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\layout\\activity_news_top.xml"
-    },
-    {
         "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_society.xml",
         "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\layout\\activity_society.xml"
+    },
+    {
+        "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_news_top.xml",
+        "source": "D:\\news\\HEU_NewsClient\\app\\src\\main\\res\\layout\\activity_news_top.xml"
     },
     {
         "merged": "D:\\news\\HEU_NewsClient\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_news_detail.xml",

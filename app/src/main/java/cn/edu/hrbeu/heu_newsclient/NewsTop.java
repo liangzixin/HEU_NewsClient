@@ -49,8 +49,8 @@ public class NewsTop extends Activity {
         mNewsList = new SimpleAdapter(this,
         		mlist,
         		R.layout.listitem,
-        		new String[]{"name", "provider", "createTime", "id"},
-        		new int[]{R.id.news_title, R.id.news_provider, R.id.news_pubtime, R.id.news_id}
+        		new String[]{"name", "categoryId", "id"},
+        		new int[]{R.id.news_title, R.id.news_provider, R.id.news_id}
         		);
         
         mNews.setAdapter(mNewsList);
@@ -61,8 +61,8 @@ public class NewsTop extends Activity {
         			News news = (News)msg.obj;
         			HashMap<String, Object> map = new HashMap<String, Object>();
         			map.put("name", news.getName());
-        			map.put("provider", "东川供求网");
-        		//	map.put("createTime", news.getCreateTime());
+        		//	map.put("provider", "东川供求网");
+        			map.put("categoryId", news.getCategoryId());
         			map.put("id", news.getId());
 
         			mlist.add(map);
@@ -70,7 +70,7 @@ public class NewsTop extends Activity {
         		}
         	}
         };
-        
+        /*
         mNews.setOnItemClickListener(new OnItemClickListener(){
 
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -92,8 +92,10 @@ public class NewsTop extends Activity {
 				in.setClass(NewsTop.this, NewsDetail.class);
 				startActivity(in);
 			}
+
         	
         });
+        */
 	}
 
 	void httpGet() {
@@ -131,14 +133,14 @@ public class NewsTop extends Activity {
     	public void startElement(String uri, String localName, String name, org.xml.sax.Attributes attributes) throws SAXException {
     		if(localName.equals("news")) {
     			curNews = new News();
-    		}/*else if(localName.equals("id")) {
+    		}/* else if(localName.equals("id")) {
     			String curid = attributes.getValue("id");
     			curNews.setId(Integer.parseInt(curid));
     		} else if(localName.equals("name")) {
     			curNews.setName(attributes.getValue("name"));
     		} else if(localName.equals("categoryId")) {
     			curNews.setCategoryId(attributes.getValue("categoryId"));
-    		}  else if(localName.equals("abstract")) {
+    		} else if(localName.equals("abstract")) {
     			curNews.setAbstract(attributes.getValue("abstract"));
     		} else if(localName.equals("provider")) {
     			curNews.setProvider(attributes.getValue("provider"));
@@ -161,9 +163,9 @@ public class NewsTop extends Activity {
     		}else if(localName.equals("id")) {
 
     			curNews.setId(Integer.parseInt(content));
-    		} else if(localName.equals("name")) {
+    		}else if(localName.equals("name")) {
     			curNews.setName(content);
-    		} else if(localName.equals("categoryId")) {
+    		}else if(localName.equals("categoryId")) {
     			curNews.setCategoryId(content);
     		}/* else if(localName.equals("abstract")) {
     			curNews.setAbstract(content);

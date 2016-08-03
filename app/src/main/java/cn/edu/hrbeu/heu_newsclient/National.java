@@ -58,12 +58,12 @@ public class National extends Activity {
 		mMainHandler = new Handler() {
         	public  void handleMessage(Message msg) {
         		if(msg.obj != null) {
-        			News news = (News)msg.obj;
-        			HashMap<String, Object> map = new HashMap<String, Object>();
-        			map.put("name", news.getName());
-        			map.put("provider", "东川供求网");
-        			map.put("creatTime", news.getCreateTime());
-        			map.put("id", news.getId());
+					News news = (News)msg.obj;
+					HashMap<String, Object> map = new HashMap<String, Object>();
+					map.put("name", news.getName());
+					//	map.put("provider", "东川供求网");
+					map.put("categoryId", news.getCategoryId());
+					map.put("id", news.getId());
         		//	map.put("loc", news.getStorageLoc());
         		//	map.put("orig", news.getLink());
         			mlist.add(map);
@@ -71,7 +71,7 @@ public class National extends Activity {
         		}
         	}
         };
-        
+        /*
         mNews.setOnItemClickListener(new OnItemClickListener(){
 
 			public void onItemClick(AdapterView<?> parent, View view,
@@ -95,13 +95,14 @@ public class National extends Activity {
 			}
         	
         });
+        */
 	}
 
 	
 	void httpGet() {
     	GetHttpTask task = new GetHttpTask();
-//		task.execute(ServerWebRoot.getServerWebRoot()+"NationalNews.xml");
-			task.execute(ServerWebRoot.getServerWebRoot()+"UpdateNews");
+		task.execute(ServerWebRoot.getServerWebRoot()+"NationalNews.xml");
+		//	task.execute(ServerWebRoot.getServerWebRoot()+"UpdateNews");
     }
     
     public class GetHttpTask extends AsyncTask<String, Integer, String> {
@@ -156,6 +157,18 @@ public class National extends Activity {
     	}
     	
     	public void endElement(String uri, String localName, String name) throws SAXException{
+			if(localName.equals("news")) {
+				Message msg = mMainHandler.obtainMessage();
+				msg.obj = curNews;
+				mMainHandler.sendMessage(msg);
+			}else if(localName.equals("id")) {
+
+				curNews.setId(Integer.parseInt(content));
+			}else if(localName.equals("name")) {
+				curNews.setName(content);
+			}else if(localName.equals("categoryId")) {
+				curNews.setCategoryId(content);
+			}
 			/*
     		if(localName.equals("news")) {
     			Message msg = mMainHandler.obtainMessage();
